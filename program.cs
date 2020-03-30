@@ -18,7 +18,7 @@ namespace BusinessNewsApp
         private async Task GetArticles()
         {
             string response = await client.GetStringAsync(
-                $"https://newsapi.org/v2/top-headlines?country=us&apiKey={ApiKey.key}");
+            $"http://newsapi.org/v2/everything?q=business&apiKey={ApiKey.key}");
 
             NewsResponse newsObject = JsonConvert.DeserializeObject<NewsResponse>(response);
 
